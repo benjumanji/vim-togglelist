@@ -35,6 +35,7 @@ function! ToggleLocationList()
   let nextbufnr = winbufnr(winnr + 1)
   try
     lopen
+    wincmd j
   catch /E776/
       echohl ErrorMsg 
       echo "Location List is Empty."
